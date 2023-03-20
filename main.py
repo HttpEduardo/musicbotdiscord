@@ -19,8 +19,6 @@ class SubButton(discord.ui.View):
         self.value = None
         self.timeout=600
 
-        botaourl = discord.ui.Button(label="Inscreva-se no Canal!",url="https://www.youtube.com/@DuneDiscord?sub_confirmation=1")
-        self.add_item(botaourl)
 
 @bot.event
 async def on_ready(): 
@@ -33,7 +31,7 @@ async def sync(ctx,guild=None):
         await bot.tree.sync()
     else:
         await bot.tree.sync(guild=discord.Object(id=int(guild)))
-    await ctx.send("**Sincronizado!** Se você chegou até aqui, dá uma força para a gente se inscrevendo no YouTube!",view=SubButton())
+    await ctx.send("**parabens vamos ouvir musica",view=SubButton())
 
 async def main():
     async with bot:
